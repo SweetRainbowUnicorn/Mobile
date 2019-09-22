@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maxresdefault"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/login_screen_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
+        android:textSize="30sp"
+        android:text="@string/sign_in" />
+
+    <TextView android:id="@+id/login_screen_ask_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#945E2210"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/enter_your_email" />
+
+    <EditText
+        android:id="@+id/login_screen_enter_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#945E2210"
+        android:textSize="30sp"
+        android:inputType="textEmailAddress"
+        android:autofillHints="Email" />
+
+    <TextView android:id="@+id/login_screen_ask_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#945E2210"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/enter_your_password" />
+
+    <EditText
+        android:id="@+id/login_screen_enter_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#945E2210"
+        android:textSize="30sp"
+        android:inputType="textPassword"
+        android:autofillHints="Password" />
+
+    <Button android:id="@+id/go_to_welcome_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sign_in" />
+
+    <TextView android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        android:textSize="20sp"
+        android:text="@string/register" />
+
+    <Button android:id="@+id/go_to_sign_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sign_up" />
+
+</LinearLayout>

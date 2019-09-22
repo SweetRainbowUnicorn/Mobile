@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maxresdefault"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/sign_in"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/Enter_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#945E2210"
+        android:gravity="center"
+        android:text="@string/enter_your_email"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Email"
+        android:background="#945E2210"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/enter_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#945E2210"
+        android:gravity="center"
+        android:text="@string/enter_your_password"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Password"
+        android:background="#945E2210"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/go_to_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sign_in" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:text="@string/register"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/go_to_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sign_up" />
+
+</LinearLayout>
