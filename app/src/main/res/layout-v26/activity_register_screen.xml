@@ -105,14 +105,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="90dp"
         android:textSize="20sp"
         android:text="@string/member" />
-
-    <Button android:id="@+id/go_to_sign_in_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/sign_in" />
 
 </LinearLayout>

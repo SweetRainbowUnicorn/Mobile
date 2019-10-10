@@ -4,10 +4,10 @@
     <string name="sign_up">Sign up</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="sign_in">Sign in</string>
-    <string name="register">Don\'t have an account?</string>
+    <string name="register">Don\'t have an account</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="enter_your_phone">Enter your phone number</string>
-    <string name="member">Already a member?</string>
+    <string name="member">Already a member</string>
     <string name="input_error_name">You should write your name</string>
     <string name="input_error_email">You should white your email address</string>
     <string name="input_error_email_invalid">Please, enter valid email</string>
@@ -16,4 +16,5 @@
     <string name="input_error_phone">Please, enter your phone number</string>
     <string name="input_error_phone_invalid">Please, enter a valid phone number in the format 380XXXXXXXXX</string>
     <string name="welcome">WELCOME</string>
+    <string name="sign_out">Sign out</string>
 </resources>

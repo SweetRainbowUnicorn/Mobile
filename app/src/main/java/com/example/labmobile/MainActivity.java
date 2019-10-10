@@ -4,16 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText emailField;
     private EditText passwordField;
+    private Button signInButton;
 
     private FirebaseAuth auth;
 
@@ -25,22 +29,26 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         emailField = findViewById(R.id.login_screen_enter_email);
         passwordField = findViewById(R.id.login_screen_enter_password);
+        signInButton = findViewById(R.id.go_to_welcome_button);
 
-        findViewById(R.id.go_to_welcome_button).setOnClickListener(v -> {
-            final String email = emailField.getText().toString();
-            final String password = passwordField.getText().toString();
-            signIn(email,password);
+        signInButton.setOnClickListener(v -> {
+            if (!validateEmailField() | !validatePasswordField()) {
+                return;
+            }
+            signIn(emailField.getEditableText().toString().trim(), passwordField.getEditableText()
+                    .toString().trim());
         });
 
         goToRegisterScreen();
     }
 
     private void goToRegisterScreen() {
-        Button goToRegisterButton = findViewById(R.id.go_to_sign_up_button);
-        goToRegisterButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, RegisterScreen.class)));
+        TextView goToRegisterButton = findViewById(R.id.register);
+        goToRegisterButton.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, RegisterScreen.class)));
     }
 
-    private void signIn(final String email, final String password){
+    private void signIn(final String email, final String password) {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 onSignInSuccess();
@@ -50,12 +58,38 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void onSignInSuccess(){
+    private void onSignInSuccess() {
         final Intent intent = new Intent(this, WelcomeScreen.class);
         startActivity(intent);
     }
 
-    private void onSignInFailure(){
-        Toast.makeText(MainActivity.this, "Authentication failed", Toast.LENGTH_LONG).show();
+    private void onSignInFailure() {
+        Toast.makeText(MainActivity.this, "Authentication failed",
+                Toast.LENGTH_LONG).show();
+    }
+
+    public boolean validateEmailField() {
+        String email = emailField.getEditableText().toString().trim();
+        if (email.isEmpty()) {
+            emailField.setError("This field is required");
+            return false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            emailField.setError("Invalid email");
+            return false;
+        } else {
+            emailField.setError(null);
+            return true;
+        }
+    }
+
+    public boolean validatePasswordField() {
+        String password = passwordField.getEditableText().toString().trim();
+        if (password.isEmpty()) {
+            passwordField.setError("This field is required");
+            return false;
+        } else {
+            passwordField.setError(null);
+            return true;
+        }
     }
 }
