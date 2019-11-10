@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1089455901251",
+    "firebase_url": "https://labmobile-e5265.firebaseio.com",
+    "project_id": "labmobile-e5265",
+    "storage_bucket": "labmobile-e5265.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089455901251:android:da04efed4f40bdaf3962f6",
+        "android_client_info": {
+          "package_name": "com.example.labmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089455901251-mloqimv4sahr292dp6qngh2nsuf5vvjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-0Jw32RqDM69Cx_PNkSD0otxTBCh3h2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089455901251-mloqimv4sahr292dp6qngh2nsuf5vvjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

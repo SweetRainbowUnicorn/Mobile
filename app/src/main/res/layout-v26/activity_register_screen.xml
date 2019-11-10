@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maxresdefault"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/register_screen_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="30sp"
+        android:text="@string/sign_up" />
+    
+    <TextView android:id="@+id/register_screen_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#945E2210"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/enter_your_name" />
+
+    <EditText
+        android:id="@+id/register_screen_enter_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#945E2210"
+        android:textSize="30sp"
+        android:inputType="textPersonName"
+        android:autofillHints="Name"
+        tools:ignore="LabelFor" />
+
+    <TextView android:id="@+id/register_screen_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#945E2210"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/enter_your_email" />
+
+    <EditText
+        android:id="@+id/register_screen_enter_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#945E2210"
+        android:textSize="30sp"
+        android:inputType="textEmailAddress"
+        android:autofillHints="Email" />
+
+    <TextView android:id="@+id/register_screen_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#945E2210"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/enter_your_phone" />
+
+    <EditText
+        android:id="@+id/register_screen_enter_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#945E2210"
+        android:textSize="30sp"
+        android:inputType="phone"
+        android:autofillHints="380 XX XXX XXXX" />
+
+    <TextView android:id="@+id/register_screen_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#945E2210"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/enter_your_password" />
+
+    <EditText
+        android:id="@+id/register_screen_enter_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#945E2210"
+        android:textSize="30sp"
+        android:inputType="textPassword"
+        android:autofillHints="Password" />
+
+    <Button android:id="@+id/sign_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sign_up" />
+
+    <TextView android:id="@+id/member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:textSize="20sp"
+        android:text="@string/member" />
+
+</LinearLayout>
